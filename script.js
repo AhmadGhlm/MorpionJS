@@ -51,3 +51,12 @@ function handleClick(e) {
     setBoardHoverClass();
   }
 }
+
+function endGame(draw) {
+  if (draw) {
+    winningMessageTextElement.innerText = "Draw!";
+  } else {
+    winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`;
+  }
+  winningMessageElement.classList.add("show");
+}
