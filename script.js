@@ -60,3 +60,11 @@ function endGame(draw) {
   }
   winningMessageElement.classList.add("show");
 }
+
+function isDraw() {
+  return [...cellElements].every(cell => {
+    return (
+      cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
+    );
+  });
+}
